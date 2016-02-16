@@ -20,8 +20,8 @@ function generateRandomFact(first, last) {
 randomFactIndex = generateRandomFact(1, 9) - 1;
 $("#fact-text").append( randomFact.facts[randomFactIndex].text );
 
-function onClick() {
+$('#fact-button').on('click', function() {
   randomFactIndex = generateRandomFact(1, 9) - 1;
   $( "#fact-text" ).empty();
   $( "#fact-text" ).prepend( randomFact.facts[randomFactIndex].text );
-}
+});
