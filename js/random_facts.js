@@ -17,8 +17,8 @@ function generateRandomFact(first, last) {
   return Math.floor(Math.random() * (last - first + 1)) + first;
 }
 
-// randomFactIndex = generateRandomFact(1, 9) - 1;
-// $("#fact-text").append( randomFact.facts[randomFactIndex].text );
+randomFactIndex = generateRandomFact(1, 9) - 1;
+$("#fact-text").append( randomFact.facts[randomFactIndex].text );
 
 function onClick() {
   randomFactIndex = generateRandomFact(1, 9) - 1;
