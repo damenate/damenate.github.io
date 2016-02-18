@@ -9,7 +9,7 @@ var randomFact = {
     {"text":"I love swimming and ultimate frisbee!"},
     {"text":"I had an American wedding and a traditional Korean style one."},
     {"text":"I'm good freinds with season 8 American Idol winner Kris Allen."},
-    {"text":"Needs to open eyes wider, ""was once written on my ballroom dancing test."}
+    {"text":"I was once told that I needed to open my eyes wider during a ballroom dancing skills test."}
   ]
 };
 
