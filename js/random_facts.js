@@ -3,7 +3,7 @@ var randomFact = {
   "facts": [
     {"text":"I've raised a Black Bear, until he got too big."},
     {"text":"I was once a train conductor, Choo Choo!"},
-    {"text":"I once slid across the hood of a cop car with a ski-mask on."},
+    {"text":"I am the 2015 Arkansas Magic the Gathering State Champion."},
     {"text":"I trained my dog to catch fish."},
     {"text":"I backpacked Europe for a summer."},
     {"text":"I love swimming and ultimate frisbee!"},
