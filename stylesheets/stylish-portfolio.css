@@ -189,7 +189,7 @@ footer {
 }
 
 #contact-link:hover {
-  color:rgba(61, 114, 164, 1);
+  color: #3D72A4;
 }
 
 .resume {
@@ -206,7 +206,7 @@ footer {
 }
 
 #portfolio-link:hover {
-  color: rgba(61, 114, 164, 1);
+  color:#3D72A4;
 }
 
 .portfolio-img-container {
