@@ -8,7 +8,7 @@ var randomFact = {
     {"text":"I backpacked Europe for a summer."},
     {"text":"I love swimming and ultimate frisbee!"},
     {"text":"I had an American wedding and a traditional Korean style one."},
-    {"text":"I'm good freinds with season 8 American Idol winner Kris Allen."},
+    {"text":"I'm good friends with season 8 American Idol winner, Kris Allen."},
     {"text":"Someday I will hike the entire Appalachian Trail!"}
   ]
 };
