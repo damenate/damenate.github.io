@@ -186,6 +186,8 @@
 </html>
 
 <script>
+var randomID =  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+
 (function(apiKey){
     (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
     v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
@@ -197,13 +199,13 @@
         // Please use Strings, Numbers, or Bools for value types.
         pendo.initialize({
             visitor: {
-                id:           'dk_unique_visitor_id',   // Required if user is logged in
+                id: randomID,   // Required if user is logged in
                 // You can add any additional visitor level key-values here,
                 // as long as it's not one of the above reserved names.
             },
 
             account: {
-                id:           'dk_unique_account_id' // Highly recommended
+                id: 'dk_unique_account_id' // Highly recommended
                 // name:         // Optional
                 // planLevel:    // Optional
                 // planPrice:    // Optional
