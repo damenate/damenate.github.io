@@ -193,23 +193,15 @@
 
   </body>
 </html>
-<script>
-  // segment.io script
-  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-  analytics.load("ZJRTIpzIhQwUZk1dMm1N5AnN5HfJv7gI");
-  analytics.page();
-  }}();
-</script>
 
 <script>
   // pendo script
-// var randomID =  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
   var superMember = ["Iron Man", "Wolverine", "Spider-Man", "Thor", "Captain Marvel", "Hulk", "Storm", "Rogue", 
                      "Gambit", "Black Panther", "Captain America", "Star Lord", "Drax", "Rocket", 
-                     "Groot", "Black Widow", "Gamora"]
+                     "Groot", "Black Widow", "Gamora"];
   var randomID_02 = superMember[Math.floor(Math.random() * myArray.length)];
   
-  var superTeamArray = ["Justice_League", "Avengers", "X-Men", "GuardiansOfTheGalaxy"]
+  var superTeamArray = ["Justice_League", "Avengers", "X-Men", "GuardiansOfTheGalaxy"];
   var randomTeam_1 = superTeamArray[Math.floor(Math.random() * myArray.length)];
 
  
@@ -244,13 +236,4 @@
             }
         });
 })('2c5deaab-f808-405a-4296-48d488968541');
-</script>
-
-<script>
-  pendo.track("Drop Down Selector Test", {
-  PROPERTY1: "selector1",
-  PROPERTY2: "selector2",
-  PROPERTYN: "selector3",
-  
-});
 </script>
