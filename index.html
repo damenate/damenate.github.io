@@ -207,8 +207,17 @@
 
 <script>
   // pendo script
-var randomID =  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+// var randomID =  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+  var superMember = ["Iron Man", "Wolverine", "Spider-Man", "Thor", "Captain Marvel", "Hulk", "Storm", "Rogue", 
+                     "Gambit", "Black Panther", "Captain America", "Star Lord", "Drax", "Rocket", 
+                     "Groot", "Black Widow", "Gamora"]
+  var randomID_02 = myArray[Math.floor(Math.random() * myArray.length)];
+  
+  var superTeamArray = ["Justice_League", "Avengers", "X-Men", "GuardiansOfTheGalaxy"]
+  var randomTeam_1 = myArray[Math.floor(Math.random() * myArray.length)];
 
+ 
+  
 (function(apiKey){
     (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
     v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
@@ -220,13 +229,13 @@ var randomID =  Math.random().toString(36).substring(2, 15) + Math.random().toSt
         // Please use Strings, Numbers, or Bools for value types.
         pendo.initialize({
             visitor: {
-                id: randomID,   // Required if user is logged in
+                id: randomID_02,   // Required if user is logged in
                 // You can add any additional visitor level key-values here,
                 // as long as it's not one of the above reserved names.
             },
 
             account: {
-                id: 'dk_unique_account_id',
+                id: randomTeam_1,
                 cloudType: 'fluffy',
                 cloudAccountType: 'AWS'
                 // name:         // Optional
