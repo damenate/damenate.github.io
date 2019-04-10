@@ -207,10 +207,10 @@
   var superMember = ["Iron Man", "Wolverine", "Spider-Man", "Thor", "Captain Marvel", "Hulk", "Storm", "Rogue", 
                      "Gambit", "Black Panther", "Captain America", "Star Lord", "Drax", "Rocket", 
                      "Groot", "Black Widow", "Gamora"]
-  var randomID_02 = myArray[Math.floor(Math.random() * myArray.length)];
+  var randomID_02 = superMember[Math.floor(Math.random() * myArray.length)];
   
   var superTeamArray = ["Justice_League", "Avengers", "X-Men", "GuardiansOfTheGalaxy"]
-  var randomTeam_1 = myArray[Math.floor(Math.random() * myArray.length)];
+  var randomTeam_1 = superTeamArray[Math.floor(Math.random() * myArray.length)];
 
  
   
@@ -246,4 +246,11 @@
 })('2c5deaab-f808-405a-4296-48d488968541');
 </script>
 
-
+<script>
+  pendo.track("Drop Down Selector Test", {
+  PROPERTY1: "selector1",
+  PROPERTY2: "selector2",
+  PROPERTYN: "selector3",
+  
+});
+</script>
