@@ -184,7 +184,7 @@
     <script src="/js/random_facts.js"></script>
 
  <div>   
-    <select class="reports-list-select"> 
+    <select id="selectMenu" class="reports-list-select"> 
     <option id="selector1" value="279e4645-5275-4949-9797-bfcf9d1d451a">Test Selector 1</option> 
     <option id="selecto2" value="170e66cc-bbe4-4f5a-8449-88f7cffc0823">Test Selector 2</option> 
     <option id="selector3" value="9b4df9ce-6e72-4eeb-88fb-14c95664633a">Test Selector 3</option> 
@@ -195,7 +195,7 @@
   (function dropDown() {
     
     // Change the CSS selector in the parenthesis to match your select menu
-    var selectMenu = document.querySelector('select#selectMenu');
+    var selectMenu = document.getElementById('select#selectMenu');
     
     var callback = function(e) {
       var selectedOption = e.target.options[e.target.selectedIndex];
