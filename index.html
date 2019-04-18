@@ -191,7 +191,18 @@
     <option id="selector4" value="de101675-f900-407f-8ffd-2b41539d98ed">Test Selector 4</option> 
     </select>
  </div>
-
+<script>
+  (function() {
+    
+    // Change the CSS selector in the parenthesis to match your select menu
+    var selectMenu = document.querySelector('select.reports-list-select');
+    
+    var callback = function(e) {
+    var selectedOption = e.target.options[e.target.selectedIndex];
+    };
+    
+  })();
+</script>
   </body>
 </html>
 
@@ -209,7 +220,7 @@
   
 (function(apiKey){
     (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
-    v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+    v=['initialize','identify', 'track', 'updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
         o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
         y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
         z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
@@ -239,8 +250,8 @@
                 // as long as it's not one of the above reserved names.
             }
         });
+      pendo.track("TestSelector", {
+      option1: selectedOption
+});
 })('2c5deaab-f808-405a-4296-48d488968541');
-
-
-
 </script>
