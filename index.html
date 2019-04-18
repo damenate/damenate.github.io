@@ -214,35 +214,33 @@
 </html>
 
 <script>
+     // pendo script
+        var superMember = ["Iron Man", "Wolverine", "Spider-Man", "Thor", "Captain Marvel", "Hulk", "Storm", "Rogue",
+            "Gambit", "Black Panther", "Captain America", "Star Lord", "Drax", "Rocket",
+            "Groot", "Black Widow", "Gamora"];
+        var randomID_02 = superMember[Math.floor(Math.random() * superMember.length)];
 
-            (function dropDown() {
+        var superTeamArray = ["Justice_League", "Avengers", "X-Men", "GuardiansOfTheGalaxy"];
+        var randomTeam_1 = superTeamArray[Math.floor(Math.random() * superTeamArray.length)];
+        
+    (function dropDown() {
 
-            // Change the CSS selector in the parenthesis to match your select menu
-            var selectMenu = document.getElementById('select#selectMenu');
+        // Change the CSS selector in the parenthesis to match your select menu
+        var selectMenu = document.getElementById('select#selectMenu');
 
-            var callback = function (e) {
-                var selectedOption = e.target.options[e.target.selectedIndex];
-                window.dataLayer.push({
-                event: 'selectionMade',
-            selectedElement: selectedOption
-        });
-    };
-})();
+        var callback = function (e) {
+        var selectedOption = e.target.options[e.target.selectedIndex];
+            window.dataLayer.push({
+            event: 'selectionMade',
+        selectedElement: selectedOption
+            });
+        };
+   })();
 
-        pendo.track("TestSelector", {
-                option1: dropDown
+    pendo.track("TestSelector", {
+            option1: dropDown
+    }
     
-  // pendo script
-  var superMember = ["Iron Man", "Wolverine", "Spider-Man", "Thor", "Captain Marvel", "Hulk", "Storm", "Rogue",
-          "Gambit", "Black Panther", "Captain America", "Star Lord", "Drax", "Rocket",
-          "Groot", "Black Widow", "Gamora"];
-      var randomID_02 = superMember[Math.floor(Math.random() * superMember.length)];
-
-      var superTeamArray = ["Justice_League", "Avengers", "X-Men", "GuardiansOfTheGalaxy"];
-      var randomTeam_1 = superTeamArray[Math.floor(Math.random() * superTeamArray.length)];
-
- 
-  
 (function (apiKey) {
           (function (p, e, n, d, o) {
               var v, w, x, y, z; o = p[d] = p[d] || {}; o._q = [];
@@ -278,7 +276,5 @@
                   // as long as it's not one of the above reserved names.
               }
           });
-
-      });
 }) ('2c5deaab-f808-405a-4296-48d488968541');
 </script>
