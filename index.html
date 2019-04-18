@@ -204,9 +204,10 @@
         selectedElement: selectedOption
       });
     };
-    
-    selectMenu.addEventListener('change', callback, true);
   })();
+  
+  pendo.track("TestSelector", {
+      option1: dropDown
 </script>
   </body>
 </html>
@@ -255,8 +256,7 @@
                 // as long as it's not one of the above reserved names.
             }
         });
-      pendo.track("TestSelector", {
-      option1: dropDown
+      
 });
 })('2c5deaab-f808-405a-4296-48d488968541');
 </script>
