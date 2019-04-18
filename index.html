@@ -192,15 +192,20 @@
     </select>
  </div>
 <script>
-  (function() {
+  (function dropDown() {
     
     // Change the CSS selector in the parenthesis to match your select menu
-    var selectMenu = document.querySelector('select.reports-list-select');
+    var selectMenu = document.querySelector('select#selectMenu');
     
     var callback = function(e) {
-    var selectedOption = e.target.options[e.target.selectedIndex];
+      var selectedOption = e.target.options[e.target.selectedIndex];
+      window.dataLayer.push({
+        event: 'selectionMade',
+        selectedElement: selectedOption
+      });
     };
     
+    selectMenu.addEventListener('change', callback, true);
   })();
 </script>
   </body>
@@ -220,7 +225,7 @@
   
 (function(apiKey){
     (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
-    v=['initialize','identify', 'track', 'updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+    v=['initialize','identify', 'updateOptions','pageLoad', 'trackEvents'];for(w=0,x=v.length;w<x;++w)(function(m){
         o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
         y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
         z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
@@ -251,7 +256,7 @@
             }
         });
       pendo.track("TestSelector", {
-      option1: selectedOption
+      option1: dropDown
 });
 })('2c5deaab-f808-405a-4296-48d488968541');
 </script>
