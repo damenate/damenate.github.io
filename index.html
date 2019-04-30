@@ -203,7 +203,7 @@
     <div>
         <select id="selectMenu">
             <option id="selector1" value="279e4645-5275-4949-9797-bfcf9d1d451a">Test Selector 1</option> 
-            <option id="selecto2" value="170e66cc-bbe4-4f5a-8449-88f7cffc0823">Test Selector 2</option> 
+            <option id="selector2" value="170e66cc-bbe4-4f5a-8449-88f7cffc0823">Test Selector 2</option> 
             <option id="selector3" value="9b4df9ce-6e72-4eeb-88fb-14c95664633a">Test Selector 3</option> 
             <option id="selector4" value="de101675-f900-407f-8ffd-2b41539d98ed">Test Selector 4</option> 
         </select>	   
@@ -215,9 +215,9 @@
 
 <script>
   // pendo script
-        var superMember = ["Iron Man", "Wolverine", "Spider-Man", "Thor", "Captain Marvel", "Hulk", "Storm", "Rogue",
-            "Gambit", "Black Panther", "Captain America", "Star Lord", "Drax", "Rocket",
-            "Groot", "Black Widow", "Gamora"];
+        var superMember = ["IronMan", "Wolverine", "Spider-Man", "Thor", "CaptainMarvel", "Hulk", "Storm", "Rogue",
+            "Gambit", "BlackPanther", "CaptainAmerica", "StarLord", "Drax", "Rocket",
+            "Groot", "BlackWidow", "Gamora"];
         var randomID_02 = superMember[Math.floor(Math.random() * superMember.length)];
 
         var superTeamArray = ["Justice_League", "Avengers", "X-Men", "GuardiansOfTheGalaxy"];
@@ -253,9 +253,7 @@
           // Please use Strings, Numbers, or Bools for value types.
           pendo.initialize({
               visitor: {
-                  user_id: "1",
-                  email: "super@hero.com",
-                  company_name: "SuperHero",
+                  email: randomID_02 + "@hero.com",
                   id: randomID_02   // Required if user is logged in
                   // You can add any additional visitor level key-values here,
                   // as long as it's not one of the above reserved names.
