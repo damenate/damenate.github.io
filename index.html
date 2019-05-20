@@ -209,11 +209,6 @@
 </body>
 </html>
 
-<script src="jquery-3.4.0.min.js">
-    $("#sort").change(function(){
-       var trackTest = $(this).val();
-    });
-</script>
 <script>
     // pendo script
     var superMember = ["IronMan", "Wolverine", "Spider-Man", "Thor", "CaptainMarvel", "Hulk", "Storm", "Rogue",
@@ -233,9 +228,7 @@
             y = e.createElement(n); y.async = !0; y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
             z = e.getElementsByTagName(n)[0]; z.parentNode.insertBefore(y, z);
         })(window, document, 'script', 'pendo');
-          pendo.track("track event test", {
-                testoption: trackTest
-            });
+          
         // Call this whenever information about your visitors becomes available
         // Please use Strings, Numbers, or Bools for value types.
         pendo.initialize({
