@@ -198,28 +198,18 @@
     <!-- Custom Javascript -->
     <script src="/js/main.js"></script>
     <script src="/js/random_facts.js"></script>
-    <div>
-        <select name="testTrack" id="selectMenu">
-            <option value="select1">Test 1</option>
-            <option value="select2">Test 2</option>
-        </select>
-    </div>
+    <select id="sort">
+        <option value="1">View All</option>
+        <option value="2">Ready for Review</option>
+        <option value="3">Registration Date</option>
+        <option value="4">Last Modified</option>
+        <option value="5">Ranking</option>
+        <option value="6">Reviewed</option>
+    </select>
 </body>
 </html>
 
 <script>
-        (function () {
-                // Change the CSS selector in the parenthesis to match your select menu
-                var selectMenu = document.querySelector('select#selectMenu');
-
-                var callback = function (e) {
-                    var selectedOption = e.target.options[e.target.selectedIndex];
-                    pendo.track("testSelector", {
-                        selectedElement: selectedOption.value
-                    });
-                };
-                selectMenu.addEventListener('change', callback, true);
-            })();
     // pendo script
     var superMember = ["IronMan", "Wolverine", "Spider-Man", "Thor", "CaptainMarvel", "Hulk", "Storm", "Rogue",
         "Gambit", "BlackPanther", "CaptainAmerica", "StarLord", "Drax", "Rocket",
@@ -262,6 +252,13 @@
         });
 
     })('2c5deaab-f808-405a-4296-48d488968541');
+</script>
 
-
+<script src="jquery-3.4.0.min.js">
+    $("#sort").change(function(){
+       var trackTest = $(this).val();
+    });
+    pendo.track("track event test", {
+        testoption: trackTest
+    });
 </script>
