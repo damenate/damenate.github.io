@@ -200,26 +200,11 @@
     <script src="/js/main.js"></script>
     <script src="/js/random_facts.js"></script>
 
-    <select id="cardtype" name="cards">
-        <option value="selectcard">--- Please select ---</option>
-        <option value="mastercard">Mastercard</option>
-        <option value="maestro">Maestro</option>
-        <option value="solo">Solo (UK only)</option>
-        <option value="visaelectron">Visa Electron</option>
-        <option value="visadebit">Visa Debit</option>
-    </select>
+
 </body>
 
 </html>
-<script>
-  function validate(){
-     var ddl = document.getElementById("cardtype");
-     var selectedValue = ddl.options[ddl.selectedIndex].value;
-        if (selectedValue == "selectcard"){
-            var trackSelect = selectedValue;
-       }
-    }
-</script>
+
 <script>
  
   // pendo script
@@ -263,9 +248,6 @@
                   // as long as it's not one of the above reserved names.
               }
           });
-    pendo.track("trackCard", {
-      PROPERTY1: trackSelect
-    });
 }) ('2c5deaab-f808-405a-4296-48d488968541');
     
   
