@@ -235,7 +235,7 @@
             selectedElement: selectedOption
             });
         };
-   })(selectedOption);
+   })();
 
 (function (apiKey) {
           (function (p, e, n, d, o) {
@@ -272,7 +272,7 @@
 }) ('2c5deaab-f808-405a-4296-48d488968541');
 </script>
 <script>
-  pendo.track("\selectMenu", {
-  test1: selectedOption
+  pendo.track("selectedOption", {
+  test1: "select1"
 });
 </script>
