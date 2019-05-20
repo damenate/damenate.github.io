@@ -191,7 +191,6 @@
         </div><!-- /.container -->
 
     </footer>
-
     <!-- jQuery -->
     <script src="/js/vendor/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
@@ -199,57 +198,72 @@
     <!-- Custom Javascript -->
     <script src="/js/main.js"></script>
     <script src="/js/random_facts.js"></script>
-
-
+    <div>
+        <select name="testTrack" id="selectMenu">
+            <option value="select1">Test 1</option>
+            <option value="select2">Test 2</option>
+        </select>
+    </div>
 </body>
-
 </html>
 
 <script>
- 
-  // pendo script
-        var superMember = ["IronMan", "Wolverine", "Spider-Man", "Thor", "CaptainMarvel", "Hulk", "Storm", "Rogue",
-            "Gambit", "BlackPanther", "CaptainAmerica", "StarLord", "Drax", "Rocket",
-            "Groot", "BlackWidow", "Gamora"];
-        var randomID_02 = superMember[Math.floor(Math.random() * superMember.length)];
+        (function () {
+                // Change the CSS selector in the parenthesis to match your select menu
+                var selectMenu = document.querySelector('select#selectMenu');
 
-        var superTeamArray = ["Justice_League", "Avengers", "X-Men", "GuardiansOfTheGalaxy"];
-        var randomTeam_1 = superTeamArray[Math.floor(Math.random() * superTeamArray.length)];
+                var callback = function (e) {
+                    var selectedOption = e.target.options[e.target.selectedIndex];
+                    window.dataLayer.push({
+                        event: 'selectionMade',
+                        selectedElement: selectedOption
+                    });
+                };
+
+                selectMenu.addEventListener('change', callback, true);
+            })();
+    // pendo script
+    var superMember = ["IronMan", "Wolverine", "Spider-Man", "Thor", "CaptainMarvel", "Hulk", "Storm", "Rogue",
+        "Gambit", "BlackPanther", "CaptainAmerica", "StarLord", "Drax", "Rocket",
+        "Groot", "BlackWidow", "Gamora"];
+    var randomID_02 = superMember[Math.floor(Math.random() * superMember.length)];
+    var superTeamArray = ["Justice_League", "Avengers", "X-Men", "GuardiansOfTheGalaxy"];
+    var randomTeam_1 = superTeamArray[Math.floor(Math.random() * superTeamArray.length)];
 
 
-(function (apiKey) {
-          (function (p, e, n, d, o) {
-              var v, w, x, y, z; o = p[d] = p[d] || {}; o._q = [];
-              v = ['initialize', 'identify', 'updateOptions', 'pageLoad', 'track']; for (w = 0, x = v.length; w < x; ++w)(function (m) {
-                  o[m] = o[m] || function () { o._q[m === v[0] ? 'unshift' : 'push']([m].concat([].slice.call(arguments, 0))); };
-              })(v[w]);
-              y = e.createElement(n); y.async = !0; y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
-              z = e.getElementsByTagName(n)[0]; z.parentNode.insertBefore(y, z);
-          })(window, document, 'script', 'pendo');
+    (function (apiKey) {
+        (function (p, e, n, d, o) {
+            var v, w, x, y, z; o = p[d] = p[d] || {}; o._q = [];
+            v = ['initialize', 'identify', 'updateOptions', 'pageLoad', 'track']; for (w = 0, x = v.length; w < x; ++w)(function (m) {
+                o[m] = o[m] || function () { o._q[m === v[0] ? 'unshift' : 'push']([m].concat([].slice.call(arguments, 0))); };
+            })(v[w]);
+            y = e.createElement(n); y.async = !0; y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
+            z = e.getElementsByTagName(n)[0]; z.parentNode.insertBefore(y, z);
+        })(window, document, 'script', 'pendo');
 
-          // Call this whenever information about your visitors becomes available
-          // Please use Strings, Numbers, or Bools for value types.
-          pendo.initialize({
-              visitor: {
-                  email: randomID_02 + "@hero.com",
-                  id: randomID_02   // Required if user is logged in
-                  // You can add any additional visitor level key-values here,
-                  // as long as it's not one of the above reserved names.
-              },
+        // Call this whenever information about your visitors becomes available
+        // Please use Strings, Numbers, or Bools for value types.
+        pendo.initialize({
+            visitor: {
+                email: randomID_02 + "@hero.com",
+                id: randomID_02   // Required if user is logged in
+                // You can add any additional visitor level key-values here,
+                // as long as it's not one of the above reserved names.
+            },
 
-              account: {
-                  id: randomTeam_1
-                  // name:         // Optional
-                  // planLevel:    // Optional
-                  // planPrice:    // Optional
-                  // creationDate: // Optional
+            account: {
+                id: randomTeam_1
+                // name:         // Optional
+                // planLevel:    // Optional
+                // planPrice:    // Optional
+                // creationDate: // Optional
 
-                  // You can add any additional account level key-values here,
-                  // as long as it's not one of the above reserved names.
-              }
-          });
-}) ('2c5deaab-f808-405a-4296-48d488968541');
-    
-  
+                // You can add any additional account level key-values here,
+                // as long as it's not one of the above reserved names.
+            }
+        });
+        pendo.track("test selector", {
+            test1: 'change'
+        });
+    })('2c5deaab-f808-405a-4296-48d488968541');
 </script>
-
