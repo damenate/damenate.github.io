@@ -215,8 +215,7 @@
                 var callback = function (e) {
                     var selectedOption = e.target.options[e.target.selectedIndex];
                     pendo.track("testSelector", {
-                        event: 'selectionMade',
-                        selectedElement: selectedOption
+                        selectedElement: selectedOption.value
                     });
                 };
                 selectMenu.addEventListener('change', callback, true);
