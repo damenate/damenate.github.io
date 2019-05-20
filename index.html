@@ -209,7 +209,14 @@
 </body>
 </html>
 
-<script>
+<script src="jquery-3.4.0.min.js">
+    $("#sort").change(function(){
+       var trackTest = $(this).val();
+    });
+    pendo.track("track event test", {
+        testoption: trackTest
+    });
+    
     // pendo script
     var superMember = ["IronMan", "Wolverine", "Spider-Man", "Thor", "CaptainMarvel", "Hulk", "Storm", "Rogue",
         "Gambit", "BlackPanther", "CaptainAmerica", "StarLord", "Drax", "Rocket",
@@ -252,13 +259,4 @@
         });
 
     })('2c5deaab-f808-405a-4296-48d488968541');
-</script>
-
-<script src="jquery-3.4.0.min.js">
-    $("#sort").change(function(){
-       var trackTest = $(this).val();
-    });
-    pendo.track("track event test", {
-        testoption: trackTest
-    });
 </script>
