@@ -214,12 +214,11 @@
 
                 var callback = function (e) {
                     var selectedOption = e.target.options[e.target.selectedIndex];
-                    window.dataLayer.push({
+                    pendo.track("testSelector", {
                         event: 'selectionMade',
                         selectedElement: selectedOption
                     });
                 };
-
                 selectMenu.addEventListener('change', callback, true);
             })();
     // pendo script
@@ -262,8 +261,8 @@
                 // as long as it's not one of the above reserved names.
             }
         });
-        pendo.track("test selector", {
-            test1: change
-        });
+
     })('2c5deaab-f808-405a-4296-48d488968541');
+
+
 </script>
