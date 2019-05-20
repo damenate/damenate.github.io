@@ -211,15 +211,17 @@
 </body>
 
 </html>
-
 <script>
-   function validate(){
+  function validate(){
      var ddl = document.getElementById("cardtype");
      var selectedValue = ddl.options[ddl.selectedIndex].value;
         if (selectedValue == "selectcard"){
             var trackSelect = selectedValue;
        }
     }
+</script>
+<script>
+ 
   // pendo script
         var superMember = ["IronMan", "Wolverine", "Spider-Man", "Thor", "CaptainMarvel", "Hulk", "Storm", "Rogue",
             "Gambit", "BlackPanther", "CaptainAmerica", "StarLord", "Drax", "Rocket",
@@ -261,11 +263,11 @@
                   // as long as it's not one of the above reserved names.
               }
           });
- 
-}) ('2c5deaab-f808-405a-4296-48d488968541');
-    
-     pendo.track("trackCard", {
+    pendo.track("trackCard", {
       PROPERTY1: trackSelect
     });
+}) ('2c5deaab-f808-405a-4296-48d488968541');
+    
+  
 </script>
 
