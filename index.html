@@ -232,10 +232,10 @@
         var selectedOption = e.target.options[e.target.selectedIndex];
             window.dataLayer.push({
             event: 'selectionMade',
-        selectedElement: selectedOption
+            selectedElement: selectedOption
             });
         };
-   })();
+   })(selectedOption);
 
 (function (apiKey) {
           (function (p, e, n, d, o) {
@@ -272,10 +272,7 @@
 }) ('2c5deaab-f808-405a-4296-48d488968541');
 </script>
 <script>
-  pendo.track("#selectMenu", {
-  test1: "selector1",
-  test2: "selector2",
-  test3: "selector3",
-  test4: "selector4"
+  pendo.track("\selectMenu", {
+  test1: selectedOption
 });
 </script>
