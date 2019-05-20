@@ -202,10 +202,10 @@
 
     <div>
         <select id="selectMenu">
-            <option id="selector1" value="279e4645-5275-4949-9797-bfcf9d1d451a">Test Selector 1</option> 
-            <option id="selector2" value="170e66cc-bbe4-4f5a-8449-88f7cffc0823">Test Selector 2</option> 
-            <option id="selector3" value="9b4df9ce-6e72-4eeb-88fb-14c95664633a">Test Selector 3</option> 
-            <option id="selector4" value="de101675-f900-407f-8ffd-2b41539d98ed">Test Selector 4</option> 
+            <option id="selector1">Test Selector 1</option> 
+            <option id="selector2">Test Selector 2</option> 
+            <option id="selector3">Test Selector 3</option> 
+            <option id="selector4">Test Selector 4</option> 
         </select>	   
     </div>
  
@@ -237,8 +237,6 @@
         };
    })();
 
-    
-    
 (function (apiKey) {
           (function (p, e, n, d, o) {
               var v, w, x, y, z; o = p[d] = p[d] || {}; o._q = [];
@@ -274,10 +272,10 @@
 }) ('2c5deaab-f808-405a-4296-48d488968541');
 </script>
 <script>
-  pendo.track("DropDown Selector", {
-  PROPERTY1: "selector1",
-  PROPERTY2: "selector2",
-  PROPERTY3: "selector3",
-  PROPERTY4: "selector4"
+  pendo.track("#selectMenu", {
+  test1: "selector1",
+  test2: "selector2",
+  test3: "selector3",
+  test4: "selector4"
 });
 </script>
