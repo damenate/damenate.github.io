@@ -198,14 +198,7 @@
     <!-- Custom Javascript -->
     <script src="/js/main.js"></script>
     <script src="/js/random_facts.js"></script>
-    <select id="sort">
-        <option value="1">View All</option>
-        <option value="2">Ready for Review</option>
-        <option value="3">Registration Date</option>
-        <option value="4">Last Modified</option>
-        <option value="5">Ranking</option>
-        <option value="6">Reviewed</option>
-    </select>
+ 
 </body>
 </html>
 
@@ -222,7 +215,7 @@
     (function (apiKey) {
         (function (p, e, n, d, o) {
             var v, w, x, y, z; o = p[d] = p[d] || {}; o._q = [];
-            v = ['initialize', 'identify', 'updateOptions', 'pageLoad', 'track']; for (w = 0, x = v.length; w < x; ++w)(function (m) {
+            v = ['initialize', 'identify', 'updateOptions', 'pageLoad']; for (w = 0, x = v.length; w < x; ++w)(function (m) {
                 o[m] = o[m] || function () { o._q[m === v[0] ? 'unshift' : 'push']([m].concat([].slice.call(arguments, 0))); };
             })(v[w]);
             y = e.createElement(n); y.async = !0; y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
