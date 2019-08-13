@@ -213,47 +213,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </body>
 </html>
 
-<script>
-    // pendo script
-//     var superMember = ["IronMan", "Wolverine", "Spider-Man", "Thor", "CaptainMarvel", "Hulk", "Storm", "Rogue",
-//         "Gambit", "BlackPanther", "CaptainAmerica", "StarLord", "Drax", "Rocket",
-//         "Groot", "BlackWidow", "Gamora"];
-//     var randomID_02 = superMember[Math.floor(Math.random() * superMember.length)];
-//     var superTeamArray = ["Justice_League", "Avengers", "X-Men", "GuardiansOfTheGalaxy"];
-//     var randomTeam_1 = superTeamArray[Math.floor(Math.random() * superTeamArray.length)];
 
-
-    (function (apiKey) {
-        (function (p, e, n, d, o) {
-            var v, w, x, y, z; o = p[d] = p[d] || {}; o._q = [];
-            v = ['initialize', 'identify', 'updateOptions', 'pageLoad']; for (w = 0, x = v.length; w < x; ++w)(function (m) {
-                o[m] = o[m] || function () { o._q[m === v[0] ? 'unshift' : 'push']([m].concat([].slice.call(arguments, 0))); };
-            })(v[w]);
-            y = e.createElement(n); y.async = !0; y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
-            z = e.getElementsByTagName(n)[0]; z.parentNode.insertBefore(y, z);
-        })(window, document, 'script', 'pendo');
-          
-        // Call this whenever information about your visitors becomes available
-        // Please use Strings, Numbers, or Bools for value types.
-        pendo.initialize({
-            visitor: {
-                email: "damekim@pendo.io",
-                id: "testGTM_id"   // Required if user is logged in
-                // You can add any additional visitor level key-values here,
-                // as long as it's not one of the above reserved names.
-            },
-
-            account: {
-                id: "testGMTacct_id"
-                // name:         // Optional
-                // planLevel:    // Optional
-                // planPrice:    // Optional
-                // creationDate: // Optional
-
-                // You can add any additional account level key-values here,
-                // as long as it's not one of the above reserved names.
-            }
-        });
-
-    })('2c5deaab-f808-405a-4296-48d488968541');
-</script>
