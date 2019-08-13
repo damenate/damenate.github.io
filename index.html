@@ -2,7 +2,14 @@
 <html lang="en">
 
 <head>
-
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WHJKVRG');</script>
+<!-- End Google Tag Manager -->
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,6 +30,10 @@
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHJKVRG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header navbar-right">
@@ -204,12 +215,12 @@
 
 <script>
     // pendo script
-    var superMember = ["IronMan", "Wolverine", "Spider-Man", "Thor", "CaptainMarvel", "Hulk", "Storm", "Rogue",
-        "Gambit", "BlackPanther", "CaptainAmerica", "StarLord", "Drax", "Rocket",
-        "Groot", "BlackWidow", "Gamora"];
-    var randomID_02 = superMember[Math.floor(Math.random() * superMember.length)];
-    var superTeamArray = ["Justice_League", "Avengers", "X-Men", "GuardiansOfTheGalaxy"];
-    var randomTeam_1 = superTeamArray[Math.floor(Math.random() * superTeamArray.length)];
+//     var superMember = ["IronMan", "Wolverine", "Spider-Man", "Thor", "CaptainMarvel", "Hulk", "Storm", "Rogue",
+//         "Gambit", "BlackPanther", "CaptainAmerica", "StarLord", "Drax", "Rocket",
+//         "Groot", "BlackWidow", "Gamora"];
+//     var randomID_02 = superMember[Math.floor(Math.random() * superMember.length)];
+//     var superTeamArray = ["Justice_League", "Avengers", "X-Men", "GuardiansOfTheGalaxy"];
+//     var randomTeam_1 = superTeamArray[Math.floor(Math.random() * superTeamArray.length)];
 
 
     (function (apiKey) {
@@ -226,14 +237,14 @@
         // Please use Strings, Numbers, or Bools for value types.
         pendo.initialize({
             visitor: {
-                email: randomID_02 + "@hero.com",
-                id: randomID_02   // Required if user is logged in
+                email: "damekim@pendo.io",
+                id: "testGTM_id"   // Required if user is logged in
                 // You can add any additional visitor level key-values here,
                 // as long as it's not one of the above reserved names.
             },
 
             account: {
-                id: randomTeam_1
+                id: "testGMTacct_id"
                 // name:         // Optional
                 // planLevel:    // Optional
                 // planPrice:    // Optional
