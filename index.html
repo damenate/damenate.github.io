@@ -214,13 +214,18 @@
         // Call this whenever information about your visitors becomes available
         // Please use Strings, Numbers, or Bools for value types.
         pendo.initialize({
+            annotateUrl: function() {
+             var page = getCurrentPage();
+             var annotation = { page: page };
+              return annotation;
+            }
             visitor: {
-                email: "damekim@pendo.io",
-                id: "SuperMan",   // Required if user is logged in
-                heroStatus: "S-Tier"
+                email: "test@email.com",
+                id: "test-id-199",   // Required if user is logged in
+                role: "admin"
             },
             account: {
-                id: "DC"
+                id: "test-account-1003"
             }
         });
 
