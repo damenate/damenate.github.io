@@ -215,9 +215,11 @@
         // Please use Strings, Numbers, or Bools for value types.
         pendo.initialize({
             annotateUrl: function() {
-             var page = getCurrentPage(); 
-             var annotation = { page: 'home' };
-              return annotation;
+            var urlHasChanged = hasUrlChanged();
+
+            function annotateUrl () {
+            var annotation = { page: 'home' };
+            return annotation;
             },
             visitor: {
                 email: "test@email.com",
