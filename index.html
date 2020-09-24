@@ -214,9 +214,6 @@
         // Call this whenever information about your visitors becomes available
         // Please use Strings, Numbers, or Bools for value types.
         pendo.initialize({
-            annotateUrl: function() {
-            var urlHasChanged = hasUrlChanged();
-
             function annotateUrl () {
             var annotation = { page: 'home' };
             return annotation;
