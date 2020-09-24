@@ -201,6 +201,12 @@
 </body>
 </html>
 <script>
+    
+var lastAnnotation = { page: 'annotateTest/testingslashes/slashyslashslash/slash'};
+function annotateUrl() {
+    var page = lastAnnotation;
+    return page;
+};
     (function (apiKey) {
         (function (p, e, n, d, o) {
             var v, w, x, y, z; o = p[d] = p[d] || {}; o._q = [];
@@ -214,9 +220,6 @@
         // Call this whenever information about your visitors becomes available
         // Please use Strings, Numbers, or Bools for value types.
         pendo.initialize({
-             annotateUrl: function() {
-             {page: 'home'}
-         },
             visitor: {
                 email: "test@email.com",
                 id: "test-id-199",   // Required if user is logged in
@@ -224,7 +227,8 @@
             },
             account: {
                 id: "test-account-1003"
-            }
+            },
+            annotateUrl: annotateUrl
         });
 
     })('2c5deaab-f808-405a-4296-48d488968541');
