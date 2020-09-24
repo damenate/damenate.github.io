@@ -214,9 +214,8 @@
         // Call this whenever information about your visitors becomes available
         // Please use Strings, Numbers, or Bools for value types.
         pendo.initialize({
-            var page = getCurrentPage();
-             annotateUrl: {
-             page: 'home'
+             annotateUrl: function() {
+             {page: 'home'}
          },
             visitor: {
                 email: "test@email.com",
