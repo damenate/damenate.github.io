@@ -202,7 +202,7 @@
 </html>
 <script>
     
-var lastAnnotation = { page: 'annotateTest/testingslashes/slashyslashslash/slash'};
+var lastAnnotation = { page: 'annotateTest/testing/slash'};
 function annotateUrl() {
     var page = lastAnnotation;
     return page;
@@ -226,7 +226,10 @@ function annotateUrl() {
                 role: "admin"
             },
             account: {
-                id: "test-account-1003"
+                id: "test-account-1003",
+                clouType: "fluffy",
+                tier: "2",
+                version: "8.12"
             },
             annotateUrl: annotateUrl
         });
