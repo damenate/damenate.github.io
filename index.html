@@ -202,11 +202,11 @@
 </html>
 <script>
     
-// var lastAnnotation = { page: 'nav=IceCream-and-BoughtIceCream'};
-// function annotateUrl() {
-//     var page = lastAnnotation;
-//     return page;
-// };
+var lastAnnotation = { page: 'nav=IceCream-and-BoughtIceCream'};
+function annotateUrl() {
+    var page = lastAnnotation;
+    return page;
+};
     (function (apiKey) {
         (function (p, e, n, d, o) {
             var v, w, x, y, z; o = p[d] = p[d] || {}; o._q = [];
@@ -230,7 +230,7 @@
                 tier: "2",
                 version: "8.12"
             },
-//          annotateUrl: annotateUrl
+         annotateUrl: annotateUrl
         });
 
     })('2c5deaab-f808-405a-4296-48d488968541');
