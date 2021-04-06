@@ -202,10 +202,10 @@
 </html>
 <script>
     
-var lastAnnotation = { page: 'nav=IceCream-and-BoughtIceCream'};
-function annotateUrl() {
-    var page = lastAnnotation;
-    return page;
+// var lastAnnotation = { page: 'nav=IceCream-and-BoughtIceCream'};
+// function annotateUrl() {
+//     var page = lastAnnotation;
+//     return page;
 };
     (function (apiKey) {
         (function (p, e, n, d, o) {
@@ -221,17 +221,16 @@ function annotateUrl() {
         // Please use Strings, Numbers, or Bools for value types.
         pendo.initialize({
             visitor: {
+                id: "test-user-1",
                 email: "test@email.com",
-                id: "test-id-199",   // Required if user is logged in
                 role: "admin"
             },
             account: {
-                id: "test-account-1003",
-                clouType: "fluffy",
+                id: "test-account-1",
                 tier: "2",
                 version: "8.12"
             },
-            annotateUrl: annotateUrl
+//             annotateUrl: annotateUrl
         });
 
     })('2c5deaab-f808-405a-4296-48d488968541');
