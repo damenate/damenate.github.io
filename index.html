@@ -201,8 +201,20 @@
 </body>
 </html>
 <script>
+
+function makeid(length) {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+}
     
-// var lastAnnotation = { page: 'nav=IceCream-and-BoughtIceCream'};
+    
+// var lastAnnotation = { page: 'nav=vehicles-insurance'};
 // function annotateUrl() {
 //     var page = lastAnnotation;
 //     return page;
@@ -221,12 +233,12 @@
         // Please use Strings, Numbers, or Bools for value types.
         pendo.initialize({
             visitor: {
-                id: "test-user-01",
-                email: "test01@email.com",
+                id: makeid(10),
+                email: makeid(5) + '@testemail.com',
                 role: "admin01"
             },
             account: {
-                id: "test-account-01",
+                id: makeid(15),
                 tier: "22",
                 version: "8.102"
             },
