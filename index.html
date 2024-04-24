@@ -211,23 +211,6 @@
 </body>
 </html>
 <script>
-function makeid(length) {
-    var result           = '';
-    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    var charactersLength = characters.length;
-    for ( var i = 0; i < length; i++ ) {
-      result += characters.charAt(Math.floor(Math.random() * 
- charactersLength));
-   }
-   return result;
-}
-
- var lastAnnotation = { page: 'nav=vehicles-insurance'};
- function annotateUrl() {
-    var page = lastAnnotation;
-    return page;
- };
-    
     (function (apiKey) {
         (function (p, e, n, d, o) {
             var v, w, x, y, z; o = p[d] = p[d] || {}; o._q = [];
@@ -245,7 +228,7 @@ function makeid(length) {
                 id: ""
             },
             account: {
-                id: makeid(15)
+                id: "account-id-test-123"
             },
           annotateUrl: annotateUrl
         });
